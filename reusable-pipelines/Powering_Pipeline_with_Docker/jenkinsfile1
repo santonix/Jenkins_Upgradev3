@@ -5,9 +5,7 @@ pipeline {
             args '-u root'
         }
     }
-    tools {
-      jdk 'jdk17'
-    }
+    
     environment {
         VERSION = '0.1.0'
         RELEASE_VERSION = 'R.2'
@@ -31,7 +29,7 @@ pipeline {
 
         stage('Unit Test') {
             steps {
-                dir('./java-tomcat-sample') {
+                dir('java-tomcat-sample') {
                     sh '''
                         echo "Executing Unit Tests..."
                         mvn test
@@ -69,3 +67,4 @@ Requirements --
 5. Execute Docker using root User-
    args '-u root'
 */
+
