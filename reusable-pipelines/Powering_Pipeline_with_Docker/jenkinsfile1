@@ -32,7 +32,7 @@ pipeline {
                 dir('java-tomcat-sample') {
                     sh '''
                         echo "Executing Unit Tests..."
-                        mvn test
+                        mvn   test
                     '''
                 }
             }
