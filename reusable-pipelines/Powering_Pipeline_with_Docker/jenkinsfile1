@@ -40,8 +40,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building version: ${VERSION} with suffix: ${RELEASE_VERSION}"
-                echo "Mention your Application Build Code here!!!"
+                script {
+                    echo "Building version: ${VERSION} with suffix: ${RELEASE_VERSION}"
+                    echo 'Mention your Application Build Code here!!!'
+                }
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
         }
