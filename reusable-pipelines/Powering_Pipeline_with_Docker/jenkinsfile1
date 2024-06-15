@@ -5,7 +5,9 @@ pipeline {
             args '-u root'
         }
     }
-    
+    tools {
+      jdk 'jdk17'
+    }
     environment {
         VERSION = '0.1.0'
         RELEASE_VERSION = 'R.2'
